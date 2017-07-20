@@ -33,5 +33,48 @@ public class TestPlayGameRCP {
 		Assert.assertTrue(false == paper.play(paper));
 		
 	}
+	
+	@Test
+	public void testOnlyRock() {
+		
+		GameRCP rock = new Rock();
+		GameRCP scissor = new Scissor();
+		GameRCP paper = new Paper();
+		
+		// Start to play
+		Assert.assertTrue(false == rock.play(rock));
+		Assert.assertTrue(true == rock.play(scissor));
+		Assert.assertTrue(false == rock.play(paper));
+		
+	}
+	
+	@Test
+	public void testOnlyScissor() {
+		
+		GameRCP rock = new Rock();
+		GameRCP scissor = new Scissor();
+		GameRCP paper = new Paper();
+		
+		// Start to play
+		Assert.assertTrue(false == scissor.play(rock));
+		Assert.assertTrue(false == scissor.play(scissor));
+		Assert.assertTrue(true == scissor.play(paper));
+		
+	}
+	
+	@Test
+	public void testOnlyPaper() {
+		
+		GameRCP rock = new Rock();
+		GameRCP scissor = new Scissor();
+		GameRCP paper = new Paper();
+		
+		// Start to play
+		Assert.assertTrue(true == paper.play(rock));
+		Assert.assertTrue(false == paper.play(scissor));
+		Assert.assertTrue(false == paper.play(paper));
+		
+	}
+	
 
 }
