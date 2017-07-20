@@ -2,12 +2,12 @@ package ajpo.rcp.impl;
 
 import ajpo.rcp.ifaces.GameRCP;
 
-public class Paper implements GameRCP{
+public abstract class Paper implements GameRCP{
 
 	@Override
-	public boolean play(GameRCP v) {
-		// TODO Auto-generated method stub
-		ganador boolean = false;
+	public boolean playwithif(GameRCP v) {
+		//return v.playWithPaper(this);
+		boolean ganador  = false;
 		
 		if (v instanceof Rock){
 			ganador = true;
@@ -17,6 +17,18 @@ public class Paper implements GameRCP{
 		if (v instanceof Scissor) {
 		}
 		return ganador;
+	}
+	
+	public boolean playWithRock(Rock r) {
+		return true;
+	}
+	
+	public boolean playWithPaper(Paper p) {
+		return false;
+	}
+	
+	public boolean playWithScissor(Scissor p) {
+		return false;
 	}
 
 }

@@ -14,65 +14,72 @@ public class TestPlayGameRCP {
 
 	@Test
 	public void test() {
-		
+		/*
 		GameRCP rock = new Rock();
 		GameRCP scissor = new Scissor();
 		GameRCP paper = new Paper();
+		*/
 		
 		// Start to play
-		Assert.assertTrue(false == rock.play(rock));
-		Assert.assertTrue(true == rock.play(scissor));
-		Assert.assertTrue(false == rock.play(paper));
+		Assert.assertTrue(false == rock.playwithif(rock));
+		Assert.assertTrue(true == rock.playwithif(scissor));
+		Assert.assertTrue(false == rock.playwithif(paper));
 		
-		Assert.assertTrue(false == scissor.play(rock));
-		Assert.assertTrue(false == scissor.play(scissor));
-		Assert.assertTrue(true == scissor.play(paper));
+		Assert.assertTrue(false == scissor.playwithif(rock));
+		Assert.assertTrue(false == scissor.playwithif(scissor));
+		Assert.assertTrue(true == scissor.playwithif(paper));
 		
-		Assert.assertTrue(true == paper.play(rock));
-		Assert.assertTrue(false == paper.play(scissor));
-		Assert.assertTrue(false == paper.play(paper));
+		Assert.assertTrue(true == paper.playwithif(rock));
+		Assert.assertTrue(false == paper.playwithif(scissor));
+		Assert.assertTrue(false == paper.playwithif(paper));
 		
 	}
 	
 	@Test
 	public void testOnlyRock() {
 		
+		/*
 		GameRCP rock = new Rock();
 		GameRCP scissor = new Scissor();
 		GameRCP paper = new Paper();
+		*/
 		
 		// Start to play
-		Assert.assertTrue(false == rock.play(rock));
-		Assert.assertTrue(true == rock.play(scissor));
-		Assert.assertTrue(false == rock.play(paper));
+		Assert.assertTrue(false == rock.playwithif(rock));
+		Assert.assertTrue(true == rock.playwithif(scissor));
+		Assert.assertTrue(false == rock.playwithif(paper));
 		
 	}
 	
 	@Test
 	public void testOnlyScissor() {
 		
+		/*
 		GameRCP rock = new Rock();
 		GameRCP scissor = new Scissor();
 		GameRCP paper = new Paper();
+		*/
 		
 		// Start to play
-		Assert.assertTrue(false == scissor.play(rock));
-		Assert.assertTrue(false == scissor.play(scissor));
-		Assert.assertTrue(true == scissor.play(paper));
+		Assert.assertTrue(false == scissor.playwithif(rock));
+		Assert.assertTrue(false == scissor.playwithif(scissor));
+		Assert.assertTrue(true == scissor.playwithif(paper));
 		
 	}
 	
 	@Test
 	public void testOnlyPaper() {
 		
+		/*
 		GameRCP rock = new Rock();
 		GameRCP scissor = new Scissor();
 		GameRCP paper = new Paper();
+		*/
 		
 		// Start to play
-		Assert.assertTrue(true == paper.play(rock));
-		Assert.assertTrue(false == paper.play(scissor));
-		Assert.assertTrue(false == paper.play(paper));
+		Assert.assertTrue(true == paper.playwithif(rock));
+		Assert.assertTrue(false == paper.playwithif(scissor));
+		Assert.assertTrue(false == paper.playwithif(paper));
 		
 	}
 	
